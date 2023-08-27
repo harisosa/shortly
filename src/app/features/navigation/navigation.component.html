@@ -1,0 +1,46 @@
+<header class="primary-header | container px-8 py-8">
+    <a href="#"><img [src]="logo" alt="Logo"/></a>
+    <nav #headerNavigation class="navigation">
+      <ul
+        id="header-navigation"
+        role="list"
+        class="nav-list hidden sm:flex gap-12"
+        aria-label="primary navigation"
+      >
+        <li class="cursor-pointer" *ngFor="let link of nav">{{link.label}}</li>
+      </ul>
+      <div class="auth-buttons hidden sm:flex gap-4">
+        <button class="text-very-dark-violet">{{login_text}}</button>
+        <button class="
+          rounded-full
+          bg-primary-cyan
+          text-white
+          w-full sm:w-[148px]
+          h-[52px]
+          px-[32px]
+          py-[16px]">
+          {{signup_text}}
+        </button>
+      </div>
+    </nav>
+    <button
+      (click)="navClick()"
+      class="mobile-hamburger sm:hidden absolute top-0 right-0 p-8"
+      aria-controls="header-navigation"
+      aria-expanded="false"
+    >
+      <img
+        class="icon-hamburger"
+        [src]="hum"
+        alt="hamburger-icon"
+        aria-hidden="true"
+      />
+      <img
+        class="icon-close hidden"
+        [src]="close"
+        alt="close-icon"
+        aria-hidden="true"
+      />
+    </button>
+  </header>
+  

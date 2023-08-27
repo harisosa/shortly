@@ -1,0 +1,22 @@
+<footer class="footer">
+    <nav class="footer-navigation | container">
+      <a href="#"><img [src]="logo" alt="white-logo" /></a>
+      <ul
+        id="footer-navigation"
+        role="list"
+        class="nav-list"
+        aria-label="footer navigation"
+      >
+      <li *ngFor="let feat of footer_text">
+        {{feat}}
+      </li>
+      </ul>
+      <ul id="social-links"
+          role="list"
+          class="social-links"
+          aria-label="social links list"
+      >
+      </ul>
+    </nav>
+  </footer>
+  

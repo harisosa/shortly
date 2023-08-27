@@ -1,1 +1,34 @@
 /* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --clr-primary-cyan: hsl(180, 66%, 49%);
+  --clr-primary-dark-violet: hsl(257, 27%, 26%);
+  --clr-secondary-red: hsl(0, 87%, 67%);
+  --clr-neutral-light-gray: hsl(225, 33%, 95%);
+  --clr-neutral-gray: hsl(0, 0%, 75%);
+  --clr-neutral-grayish-violet: hsl(257, 7%, 63%);
+  --clr-very-dark-blue: hsl(100%);
+  --clr-very-dark-violet: hsl(260, 8%, 14%);
+}
+
+.text-custom-bg {
+  color: #6B7280;
+  transition: color 0.3s ease; /* Add smooth transition effect */
+}
+
+.text-custom-bg:hover,
+.text-custom-bg:focus {
+  color: var(--clr-very-dark-violet);
+}
+
+
+.text-custom-grey {
+  color: #6B7280;
+}
+
+.bg-custom-violet {
+  background: #581C87;
+}
