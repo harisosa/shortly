@@ -1,0 +1,42 @@
+<section class="statistics">
+  <div class="container">
+    <div class="statistics__text">
+      <h2>{{title}}</h2>
+      <p>
+        {{text}}
+      </p>
+    </div>
+    <div class="statistics__data">
+      <div class="statistic">
+        <img
+          [src]="brand_logo"
+          alt="brand-icon"
+        />
+        <h3>{{brand_title}}</h3>
+        <p>
+          {{brand_text}}
+        </p>
+      </div>
+      <div class="statistic">
+        <img
+          [src]="detailed_logo"
+          alt="detailed-icon"
+        />
+        <h3>{{detailed_title}}</h3>
+        <p>
+          {{detail_record}}
+        </p>
+      </div>
+      <div class="statistic">
+        <img
+          [src]="customizable_logo"
+          alt="customizable-icon"
+        />
+        <h3>{{customizable_title}}</h3>
+        <p>
+          {{fully_customizable}}
+        </p>
+      </div>
+    </div>
+  </div>
+</section>

@@ -38,10 +38,6 @@ export class NavigationComponent {
       label: "Resources",
       link: ""
     },
-    {
-      label: "AAC",
-      link: ""
-    },
   ];
 
   navClick() {

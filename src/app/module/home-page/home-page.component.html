@@ -1,1 +1,10 @@
-<p>home-page works!</p>
+<shortly-banner></shortly-banner>
+<div class="md:px-36 gap-4 shorten">
+  <div class="flex flex-col gap-8">
+    <shortly-form (submit_action)="onSubmit($event)"></shortly-form>
+    <shortly-list *ngIf="links.length >0" [link_list]="links" (copy_button)="onCopy($event)"></shortly-list>
+  </div>
+</div>
+<shortly-content></shortly-content>
+<shortly-action></shortly-action>
+

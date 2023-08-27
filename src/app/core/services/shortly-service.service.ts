@@ -1,6 +1,5 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { IShortlyService } from '../interface/IShortlyService';
 import { Observable,map } from 'rxjs';
 import { IResponse, IResult } from '../interface/IResponse';
 import CONSTANT_API from '../constant/api.constant';
@@ -8,7 +7,7 @@ import CONSTANT_API from '../constant/api.constant';
 @Injectable({
   providedIn: 'root'
 })
-export class ShortlyServiceService implements IShortlyService {
+export class ShortlyService {
 
   constructor(private http: HttpClient) {}
 

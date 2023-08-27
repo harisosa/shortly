@@ -1,0 +1,26 @@
+<div class="bg-custom-violet bg-cover py-8 px-12 rounded-lg link-form">
+  <form [formGroup]="link_form">
+    <div class="flex flex-col md:flex-row gap-4">
+      <input id="url" type="text" name="url" [placeholder]="placeholder"
+      formControlName="link"
+        class="border-none border-radius-25 py-4 px-8 w-full" />
+      <button class="
+          rounded-md
+          w-full md:w-[188px]
+          h-[62px]
+          px-[36px]
+          py-[16px]
+          bg-[#2DD4BF]
+          text-white
+          hover:bg-[#0D9488]
+          active:bg-[#0F766E]
+          transition-colors
+          transition-duration-300
+        " (click)="onSubmit()">{{button_text}}
+      </button>
+    </div>
+  </form>
+
+  <p *ngIf="link_form.get('link')?.touched"
+    class="p-2 text-red-500">{{error_message}}</p>
+</div>

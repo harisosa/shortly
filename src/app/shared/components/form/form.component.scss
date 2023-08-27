@@ -1,0 +1,10 @@
+.link-form{
+  background: url("../../../../assets/images/bg-shorten-desktop.svg")
+    var(--clr-primary-violet);
+}
+@media (max-width: 62.5em) {
+  .link-form{
+    background: url("../../../../assets/images/bg-shorten-mobile.svg")
+      var(--clr-primary-violet);
+  }
+}

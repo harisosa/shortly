@@ -16,7 +16,7 @@
           class="social-links"
           aria-label="social links list"
       >
+      <li *ngFor="let social of social_media"><img [src]="social.src" [alt]="social.alt"/></li>
       </ul>
     </nav>
   </footer>
-  

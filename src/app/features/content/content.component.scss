@@ -1,0 +1,148 @@
+.statistics {
+  background-color: var(--clr-neutral-dark-gray);
+  padding: 10rem;
+}
+
+.statistics > .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.statistics__text {
+  text-align: center;
+}
+
+.statistics__text > h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: var(--clr-very-dark-violet);
+}
+
+.statistics__text > p {
+  font-size: 1.125rem;
+  margin-top: 1rem;
+  max-width: 45ch;
+  color: gray;
+}
+
+.statistics__data {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-top: 5rem;
+  height: 100%;
+}
+
+.statistic {
+  position: relative;
+  width: 100%;
+  background-color: white;
+  padding: 2.5rem;
+  z-index: 1;
+  height: fit-content;
+}
+
+.statistic > h3,
+.statistic > p {
+  position: relative;
+  z-index: 2;
+}
+
+.statistic::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: white;
+  z-index: 0;
+}
+
+.statistic::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: -20%;
+  transform: translateY(-50%);
+  height: 10px;
+  width: 100px;
+  background: var(--clr-primary-cyan);
+  z-index: -1;
+}
+
+.statistic:nth-child(2) {
+  margin-top: 3rem;
+}
+
+.statistic:nth-child(3) {
+  margin-top: 6rem;
+}
+
+.statistic:nth-child(3)::after {
+  display: none;
+}
+
+.statistic > img {
+  position: absolute;
+  top: 0;
+  left: 10%;
+  transform: translateY(-50%);
+  background: var(--clr-primary-dark-violet);
+  padding: 1.5rem;
+  border-radius: 100%;
+}
+
+.statistic > h3 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--clr-very-dark-violet);
+  padding: 2.5rem 0 1.5rem 0;
+}
+
+.statistic > p {
+  max-width: 30ch;
+}
+
+@media (max-width: 62.5em) {
+  .statistics {
+    padding: 5rem 0rem;
+  }
+
+  .statistics__text > h2 {
+    font-size: 1.725rem;
+  }
+
+  .statistics__data {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .statistic {
+    text-align: center;
+    padding: 1rem;
+    height: fit-content;
+  }
+
+  .statistic::after {
+    height: 200px;
+    width: 10px;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .statistic > img {
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    padding: 1rem;
+  }
+
+  .statistic > h3 {
+    font-size: 1rem;
+    padding: 1.5rem 0;
+  }
+
+  .statistic:nth-child(3) {
+    margin-top: 3rem;
+  }
+}
