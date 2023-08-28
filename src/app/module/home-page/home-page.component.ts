@@ -54,7 +54,7 @@ export class HomePageComponent {
           }
         });
       }).catch(err => {
-        console.error('Error in copying text: ', err);
+        this.openToast("Copy Faild",err);
       });
     }
 
