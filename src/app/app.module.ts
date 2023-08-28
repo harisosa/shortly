@@ -4,7 +4,13 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavigationModule } from './features/navigation/navigation.module';
 import { FooterModule } from './features/footer/footer.module';
-
+// Import from library
+import {
+  NgxAwesomePopupModule,
+  DialogConfigModule,
+  ConfirmBoxConfigModule,
+  ToastNotificationConfigModule
+} from '@costlydeveloper/ngx-awesome-popup';
 @NgModule({
   declarations: [
     AppComponent,
@@ -13,7 +19,23 @@ import { FooterModule } from './features/footer/footer.module';
     BrowserModule,
     AppRoutingModule,
     NavigationModule,
-    FooterModule
+    FooterModule,
+    NgxAwesomePopupModule.forRoot({
+      colorList: {
+        success: '#3caea3', // optional
+        info: '#2f8ee5', // optional
+        warning: '#ffc107', // optional
+        danger: '#e46464', // optional
+        customOne: '#3ebb1a', // optional
+        customTwo: '#bd47fa', // optional (up to custom five)
+      },
+    }),
+    ToastNotificationConfigModule.forRoot( {globalSettings: {
+      allowedNotificationsAtOnce: 5
+   }}),
+
+    DialogConfigModule.forRoot(), // optional
+    ConfirmBoxConfigModule.forRoot(), // optional
   ],
   providers: [],
   bootstrap: [AppComponent]
